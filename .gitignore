@@ -1,3 +1,8 @@
+# Dataset
+Caltech20.zip
+Caltech20/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
