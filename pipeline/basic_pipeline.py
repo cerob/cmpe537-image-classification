@@ -14,6 +14,8 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
+#because of problems in vlfeat import I used the fisher vector code from
+#https://gist.github.com/danoneata/9927923
 def fisher_vector(xx, gmm):
 
     xx = np.atleast_2d(xx)
@@ -130,6 +132,7 @@ def test_svm(X,y):
 
     # print(np.sum(clf.predict(X) == y) / len(y))
     print(clf.score(X, y))
+
 
 
 

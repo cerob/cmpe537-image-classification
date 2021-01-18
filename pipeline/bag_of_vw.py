@@ -23,7 +23,8 @@ class BagOfVW:
             bag_of_vw[index[0].min()]=bag_of_vw[index[0].min()]+1
 
         max=np.max(bag_of_vw)
-        bag_of_vw=bag_of_vw/max
+        norm=np.linalg.norm(bag_of_vw)
+        bag_of_vw=bag_of_vw/norm
         return bag_of_vw
 
     def load_folder(self,path):

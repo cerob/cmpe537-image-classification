@@ -104,6 +104,6 @@ if __name__ == '__main__':
         descriptions.extend(describers.orb_descriptor(image, 500))
 
     print(len(descriptions))
-    means=kmeans.hier_k_means(4,3,10,descriptions)
-    np.save("hier_kmeans.npy", means)
+    means=kmeans.hier_k_means(5,3,10,descriptions)
+    np.save("hier_kmeans_125.npy", means)
     print(means)
