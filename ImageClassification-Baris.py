@@ -40,6 +40,7 @@ def main():
     #filename = 'kmeans_model.sav'
     #pickle.dump(kmeans, open(filename, 'wb'))
 
+
     trainingSet, trainingLabels = getTrainingSet(folderList, filesOfFolders, kmeans, categoryToFeatures, CLUSTER_COUNT)
     rf = RandomForestRegressor(n_estimators = 1000, random_state = 42)
     rf.fit(trainingSet, trainingLabels)
