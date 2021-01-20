@@ -25,3 +25,7 @@ For the ORB - Hierachical K-Means - Bag of Visual Words - SVM pipeline
 For the ORB - GMM - Fisher Vectors - SVM pipeline
 
     run gmm_fisher_pipeline.py after setting the path of the dataset.
+
+In order to run SIFT - K-means - Bag of Visual Words - Random Forest pipeline 
+
+    run python3 ImageClassification-Baris.py
