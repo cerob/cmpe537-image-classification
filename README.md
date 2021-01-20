@@ -11,3 +11,5 @@ To run pipeline_mansur.py, directory structure should be as follows:
 -Caltech20  
   -training  
   -testing  
+
+In order to run SIFT - K-means - Bag of Visual Words - Random Forest pipeline, run python3 ImageClassification-Baris.py
