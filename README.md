@@ -2,6 +2,7 @@
 Local Descriptor based Image Classification
 To run pipeline_mansur.py, directory structure should be as follows:
 
+Markup :
 -src
   -pipeline_mansur.py  
   -bag_of_words.py  
