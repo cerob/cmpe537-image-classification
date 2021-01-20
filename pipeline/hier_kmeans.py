@@ -105,5 +105,5 @@ if __name__ == '__main__':
 
     print(len(descriptions))
     means=kmeans.hier_k_means(5,3,10,descriptions)
-    np.save("hier_kmeans_125.npy", means)
+    np.save("hier_kmeans.npy", means)
     print(means)
