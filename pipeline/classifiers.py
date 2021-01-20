@@ -79,6 +79,11 @@ class SVMClassifier:
         # print how our model looks after hyper-parameter tuning
         print(grid.best_estimator_)
 
+    def predict(self,X):
+        grid = pickle.load(open('bovw_svm_grid.sav', 'rb'))
+        grid_predictions = grid.predict(X)
+        return grid_predictions
+
     def model_scores(self,X,y,le):
         grid = pickle.load(open('bovw_svm_grid.sav', 'rb'))
         grid_predictions = grid.predict(X)

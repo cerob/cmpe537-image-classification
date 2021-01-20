@@ -8,6 +8,8 @@ from pipeline import classifiers
 from os import walk
 import os
 from imblearn import over_sampling
+import cv2
+from matplotlib import pyplot as plt
 
 
 class BOVWPipeline:
@@ -120,7 +122,27 @@ class BOVWPipeline:
         # mlp.test(x_train, y_train)
         # mlp.test(x_test, y_test)
         # mlp.model_scores(x_test, y_test)
+        predictions=svm.predict(x_test)
 
+
+
+        wrong_images=[]
+        for i,prediction in enumerate(predictions):
+            if not prediction==y_test[i]:
+                print(test_images[i])
+                img = cv2.imread(test_images[i])
+                resized = cv2.resize(img, (20,20), interpolation=cv2.INTER_AREA)
+                wrong_images.append(resized)
+
+        fig = plt.figure(figsize=(8, 8))
+        columns = 15
+        rows = 19
+        for i in range(0, len(wrong_images)):
+            fig.add_subplot(rows, columns, i + 1)
+            plt.axis("off")
+            plt.imshow(cv2.cvtColor(wrong_images[i], cv2.COLOR_BGR2RGB))
+
+        plt.show(block=True)
 
 if __name__ == '__main__':
     pipeline=BOVWPipeline()
