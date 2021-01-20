@@ -28,4 +28,4 @@ For the ORB - GMM - Fisher Vectors - SVM pipeline
 
 In order to run SIFT - K-means - Bag of Visual Words - Random Forest pipeline 
 
-    run python3 ImageClassification-Baris.py
+    python3 ImageClassification-Baris.py
