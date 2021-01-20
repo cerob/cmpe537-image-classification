@@ -14,3 +14,13 @@ To run pipeline_mansur.py, directory structure should be as follows:
   -testing  
 
 
+For the ORB - Hierachical K-Means - Bag of Visual Words - SVM pipeline
+
+    run bovw_pipeline.py after setting the path of the dataset.
+    If you want to recalculate K-means clusters again
+    run hier_kmeans.py after setting the path of the dataset and K.
+
+
+For the ORB - GMM - Fisher Vectors - SVM pipeline
+
+    run gmm_fisher_pipeline.py after setting the path of the dataset.
